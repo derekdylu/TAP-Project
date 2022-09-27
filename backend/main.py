@@ -77,8 +77,7 @@ def ErrorResponseModel(error, code, message):
 
 @app.get("/loaderio-99b0285b0d7f6a1037d79d9335459bdd")
 def loader_io_verify():
-    token = "loaderio-99b0285b0d7f6a1037d79d9335459bdd"
-    return JSONResponse(status_code=status.HTTP_201_CREATED, content=jsonable_encoder(token))
+    return "loaderio-99b0285b0d7f6a1037d79d9335459bdd"
 
 @app.get("/")
 async def test():
