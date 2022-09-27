@@ -4,7 +4,7 @@ import motor.motor_asyncio
 from dotenv import load_dotenv
 from fastapi import FastAPI, Body, HTTPException, status
 from fastapi.encoders import jsonable_encoder
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, HTMLResponse
 from typing import List
 from pymongo import MongoClient
 from decouple import config
@@ -74,6 +74,20 @@ def ErrorResponseModel(error, code, message):
 
 # ---
 # --- API
+
+@app.get("/loaderio-99b0285b0d7f6a1037d79d9335459bdd")
+def loader_io_verify():
+    html_content = """
+        <html>
+            <head>
+                <title>loaderio-99b0285b0d7f6a1037d79d9335459bdd</title>
+            </head>
+            <body>
+                <div>loaderio-99b0285b0d7f6a1037d79d9335459bdd</div>
+            </body>
+        </html>
+    """
+    return HTMLResponse(content=html_content, status_code=200)
 
 @app.get("/")
 async def test():
