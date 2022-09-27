@@ -75,13 +75,9 @@ def ErrorResponseModel(error, code, message):
 # ---
 # --- API
 
-@app.get("/loaderio-99b0285b0d7f6a1037d79d9335459bdd")
-def loader_io_verify():
-    return "loaderio-99b0285b0d7f6a1037d79d9335459bdd"
-
 @app.get("/")
 async def test():
-    return {"message": "Hello World"}
+    return {"ntu-tap-game": "ntu-tap-game"}
 
 # --- Comment
 # get all comments
